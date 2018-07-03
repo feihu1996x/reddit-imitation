@@ -34,4 +34,5 @@ To get more help on the `angular-cli` use `ng help` or go check out the [Angular
 
 - 增加本地缓存功能
 - 增加服务器存储功能
+- 把项目部署上线
 
