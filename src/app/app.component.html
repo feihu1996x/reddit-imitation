@@ -1,3 +1,23 @@
-<h1>
-  {{title}}
-</h1>
+<form class="ui large form segment">
+    <h3 class="ui header">Add a Link</h3>
+
+    <div class="field">
+        <label for="title">Title:</label>
+        <!-- 告诉Angular把这个 <input> DOM元素解析（resolve）到模板变量 newtitle 上 -->
+        <!-- 该模板变量可用于该视图的所有表达式中 -->
+        <input type="text" name="title" #newtitle>
+    </div>
+
+    <div class="field">
+        <label for="link">Link:</label>
+        <input type="text" name="link" #newlink>
+    </div>
+
+    <button class="ui positive right floated button" (click)="addArticle(newtitle, newlink)">
+        Submit Link
+    </button>
+</form>
+
+<div class="ui grid posts">
+    <app-article *ngFor="let foobar of sortedArticles()" [article]="foobar"></app-article>
+</div>
